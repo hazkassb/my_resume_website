@@ -107,7 +107,7 @@
               <div class="col-md-8 col-md-offset-2 wp1">
                 <h1 class="arrow">A little <span>about</span> me</h1><!-- Headline -->
 				<!-- about / welcome text -->
-                <p>I am enough of a scientist to rely freely upon my imagination. I am passionate about solving complex mathematical and scientific problems. The most fascinating thing I found about myself is probably the fact that I enjoy learning from natural observation of things around me. When I am not doing school work or solving problems on LeetCode and Hackerrank, I am almost cetainly solving some <a href="#">Project Euler</a> challenges.</p>
+                <p>I like to think of myself as an engineer, a scientist, and a mathematician. I am passionate about solving complex mathematical and scientific problems. The most fascinating thing I found about myself is probably the fact that I enjoy learning from natural observation of things around me. When I am not doing school work or solving problems on LeetCode and Hackerrank, I am almost cetainly solving some <a href="#">Project Euler</a> challenges.</p>
               </div>
             </div>
           </div>
@@ -270,47 +270,7 @@
                   </div>
               </div>
           </div>
-  	    <!-- PORTFOLIO ITEM END -->
-  	             
-          <!-- <!-- PORTFOLIO ITEM 5 -->
-          <!-- <div class="col-md-3 col-sm-6 ">
-              <div class="overlay-effect effects clearfix">
-                  <div class="img">
-                      <a href="img/portfolio/portfolio-05-large.jpg" data-lightbox="roadtrip" title="Project Five - Lorem Ipsum"><img class="grayscale" src="img/portfolio/portfolio-05-thumbnail.jpg" alt="Portfolio Item"></a>
-                  </div>
-              </div>
-          </div> -->
-  	    <!-- PORTFOLIO ITEM END -->
-  	
-  	    <!-- PORTFOLIO ITEM 6 -->
-          <!-- <div class="col-md-3 col-sm-6">
-              <div class="overlay-effect effects clearfix">
-                  <div class="img">
-                      <a href="img/portfolio/portfolio-06-large.jpg" data-lightbox="roadtrip" title="Project Six - Lorem Ipsum"><img class="grayscale" src="img/portfolio/portfolio-06-thumbnail.jpg" alt="Portfolio Item"></a>
-                  </div>
-              </div>
-          </div> -->
-  	    <!-- PORTFOLIO ITEM END -->
-  					
-  		<!-- PORTFOLIO ITEM 7 -->
-          <!-- <div class="col-md-3 col-sm-6">
-              <div class="overlay-effect effects clearfix">
-                  <div class="img">
-                      <a href="img/portfolio/portfolio-07-large.jpg" data-lightbox="roadtrip" title="Project Seven - Lorem Ipsum"><img class="grayscale" src="img/portfolio/portfolio-07-thumbnail.jpg" alt="Portfolio Item"></a>
-                  </div>
-              </div>
-          </div> -->
-  	    <!-- PORTFOLIO ITEM END -->
-  					
-  		<!-- PORTFOLIO ITEM 8 -->
-          <!-- <div class="col-md-3 col-sm-6">
-              <div class="overlay-effect effects clearfix">
-                  <div class="img">
-                      <a href="img/portfolio/portfolio-08-large.jpg" data-lightbox="roadtrip" title="Project Eight - Lorem Ipsum"><img class="grayscale" src="img/portfolio/portfolio-08-thumbnail.jpg" alt="Portfolio Item"></a>
-                  </div>
-              </div>
-          </div> -->
-  	    <!-- PORTFOLIO ITEM END -->
+		  
         </div><!--/row-->
       </div><!--/.container-->
 		<!-- ==========================
@@ -374,7 +334,7 @@
               </div>
             </div>
 			<div class="row">
-			  <!-- Google Maps (Change your Settings below) -->
+			  <!-- Google Maps -->
 			  <div class="col-md-6">
 			    <div id="googlemaps"></div>
 				 <!-- <img srs = "img/csim2.jpd"> -->
@@ -428,7 +388,7 @@
 			  </div>
 			</div>
 			<br>
-			<!-- Social Buttons - use font-awesome, past in what you want -->
+		  
             <div class="row">
               <div class="col-md-12">
                 <ul class="social-buttons">
@@ -495,27 +455,23 @@
         google.maps.event.addDomListener(window, 'load', init);
     
         function init() {
-            // Basic options for a simple Google Map
-            // For more options see: https://developers.google.com/maps/documentation/javascript/reference#MapOptions
+            // Simple Google Map
             var mapOptions = {
-                // How zoomed in you want the map to start at (always required)
+		    
                 zoom: 15,
                 
                 scrollwheel: false,
 
-                // The latitude and longitude to center the map (always required)
-                center: new google.maps.LatLng(	35.052666, -78.878357), // New York 
+                // The latitude and longitude to center the map
+                center: new google.maps.LatLng(	35.052666, -78.878357), 
 
-                // How you would like to style the map. 
-                // This is where you would paste any style found on Snazzy Maps.
+               
                 styles: [	{		featureType:'water',		stylers:[{color:'#F2F2F2'},{visibility:'on'}]	},{		featureType:'landscape',		stylers:[{color:'#FFFFFF'}]	},{		featureType:'road',		stylers:[{saturation:-100},{lightness:45}]	},{		featureType:'road.highway',		stylers:[{visibility:'simplified'}]	},{		featureType:'road.arterial',		elementType:'labels.icon',		stylers:[{visibility:'off'}]	},{		featureType:'administrative',		elementType:'labels.text.fill',		stylers:[{color:'#ADADAD'}]	},{		featureType:'transit',		stylers:[{visibility:'off'}]	},{		featureType:'poi',		stylers:[{visibility:'off'}]	}]
             };
 
-            // Get the HTML DOM element that will contain your map 
-            // We are using a div with id="map" seen below in the <body>
+            
             var mapElement = document.getElementById('googlemaps');
 
-            // Create the Google Map using out element and options defined above
             var map = new google.maps.Map(mapElement, mapOptions);
         }
 	
@@ -524,9 +480,9 @@
 	<!-- TEXT ROTATOR SETTINGS -->
     <script type="text/javascript">
     $(".rotate").textrotator({
-      animation: "fade", // You can pick the way it animates when rotating through words. Options are dissolve (default), fade, flip, flipUp, flipCube, flipCubeUp and spin.
-      separator: ",", // If you don't want commas to be the separator, you can define a new separator (|, &, * etc.) by yourself using this field.
-      speed: 2000 // How many milliseconds until the next word show.
+      animation: "fade", 
+      separator: ",", 
+      speed: 2000 
     });
     </script>
 	
