@@ -1,20 +1,7 @@
 <?php
-// URL: www.freecontactform.com
-// Version: FreeContactForm V2.3 - Installer
-// Copyright (c) 2019 freecontactform.com
-// 
-// NOTE: This script may only be used to install your software
-//       You are not licensed to use this for any other purpose
-//
-// THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-// IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-// FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-// AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-// LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-// OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
-// THE SOFTWARE.
-define('INSTALLFILE', 'freecontactforminstall.php');
-define('CONFIGFILE', 'freecontactformsettings.php');
+
+define('INSTALLFILE', 'contactforminstall.php');
+define('CONFIGFILE', 'contactformsettings.php');
 define('ABSPATH', dirname(__FILE__) . '/' );
 
 error_reporting( E_CORE_ERROR | E_CORE_WARNING | E_COMPILE_ERROR | E_ERROR | E_WARNING | E_PARSE | E_USER_ERROR | E_USER_WARNING | E_RECOVERABLE_ERROR );
@@ -32,7 +19,6 @@ $thankyou = "{thankyou.html}"; // thank you page
 // you need to update the questions answer below
 $antispam_answer = 25;
 
-// Do not change this line
 $base = "CgpGb3JtIHBvd2VyZWQgYnkgaHR0cHM6Ly93d3cuZnJlZWNvbnRhY3Rmb3JtLmNvbQ==";
 ';
 
@@ -50,13 +36,13 @@ if(isset($_POST['step'])) {
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 	<title>Installation</title>
 	
-	<link rel="stylesheet" type="text/css" href="freecontactform.css">
-	<style>.freecontactform {width: 460px;font-size:12px}</style>
+	<link rel="stylesheet" type="text/css" href="contactform.css">
+	<style>.contactform {width: 460px;font-size:12px}</style>
 	</head>
 	<body>
 	<div align="center"><br />
-	<div class="freecontactform">
-	<div class="freecontactformheader">Installation Form</div>
+	<div class="contactform">
+	<div class="contactformheader">Installation Form</div>
 
 
 <?php
@@ -77,19 +63,19 @@ switch($step) {
       ?>
 
 
-      		<script src="freecontactformvalidation.js"></script>
+      		<script src="contactformvalidation.js"></script>
 			<script>
 			required.add('email','EMAIL','Email Address');
 			required.add('subject','NOT_EMPTY','Subject Line');
 			required.add('thankyou','NOT_EMPTY','Redirect Page');
 			</script>
-			<form name="freecontactform" method="post" action="<?php echo INSTALLFILE; ?>" onsubmit="return validate.check(this)">
+			<form name="contactform" method="post" action="<?php echo INSTALLFILE; ?>" onsubmit="return validate.check(this)">
 			<input type="hidden" name="step" value="2">
 			<table width="450px">
 			<tr>
 			 <td colspan="2">
 			 
-			 <div class="freecontactformmessage">
+			 <div class="contactformmessage">
 			 Your configuration file does not exist at:<br /><br />
 			 <?php echo ABSPATH.CONFIGFILE; ?>.<br /><br />
 			 Create it now!.<br /><br />
@@ -171,20 +157,6 @@ switch($step) {
           $config_template
         );
         
-        // generate config
-        if(!$config_h = fopen(ABSPATH.CONFIGFILE,"wb")) {
-        	$viewable_code = nl2br(str_replace("<","&lt;",$config_data));
-	          $error_strings[] = "Cannot write your configuration file to: ".ABSPATH.CONFIGFILE." - Please change the directory permissions to allow write access.<br /><br /> 
-	          If you prefer, you can create the configuration file using the code below:<br /><br />".$viewable_code."<br /><br />Save the above code to a new file at: ".ABSPATH.CONFIGFILE;
-	       
-        } else {
-	        if(!fwrite($config_h, trim($config_data))){
-	          $viewable_code = nl2br(str_replace("<","&lt;",$config_data));
-	          $error_strings[] = "Cannot write your configuration file to: ".ABSPATH.CONFIGFILE." - Please change the directory permissions to allow write access.<br /><br /> 
-	          If you prefer, you can create the configuration file using the code below:<br /><br />".$viewable_code."<br /><br />Save the above code to a new file at: ".ABSPATH.CONFIGFILE;
-	        }
-	        fclose($config_h);
-        }
       }
       
       if(count($error_strings) > 0) {
@@ -200,7 +172,6 @@ switch($step) {
   
 }
 ?>
-  &copy; Copyright <a href="https://www.freecontactform.com" rel="nofollow" target="_blank">www.freecontactform.com</a>
 	<br /><br />
 	</div>
 	</div>
