@@ -11,12 +11,10 @@ $install_complete = '<br />Installation complete. <a href="contactform.htm">Visi
 $config_template = 
 '<?php
 
-$email_to = "{hazkassb@gmail.com}"; // your email address
-$email_subject = "{Monarch Tutoring}"; // email subject line
-$thankyou = "{thankyou.html}"; // thank you page
+$email_to = "{hazkassb@gmail.com}"; 
+$email_subject = "{From My Website}"; 
+$thankyou = "{thankyou.html}";
 
-// If you update the question on the form -
-// you need to update the questions answer below
 $antispam_answer = 25;
 
 $base = "CgpGb3JtIHBvd2VyZWQgYnkgaHR0cHM6Ly93d3cuZnJlZWNvbnRhY3Rmb3JtLmNvbQ==";
